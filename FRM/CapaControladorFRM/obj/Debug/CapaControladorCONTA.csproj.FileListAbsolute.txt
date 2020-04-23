@@ -1,0 +1,5 @@
+C:\Users\gganp\Desktop\FRM-CONTA\FRM\CapaControladorFRM\bin\Debug\CapaControladorCONTA.dll
+C:\Users\gganp\Desktop\FRM-CONTA\FRM\CapaControladorFRM\bin\Debug\CapaControladorCONTA.pdb
+C:\Users\gganp\Desktop\FRM-CONTA\FRM\CapaControladorFRM\obj\Debug\CapaControladorCONTA.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\FRM-CONTA\FRM\CapaControladorFRM\obj\Debug\CapaControladorCONTA.dll
+C:\Users\gganp\Desktop\FRM-CONTA\FRM\CapaControladorFRM\obj\Debug\CapaControladorCONTA.pdb
