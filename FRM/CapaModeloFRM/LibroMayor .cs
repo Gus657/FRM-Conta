@@ -161,32 +161,32 @@ namespace CapaModeloCONTA
 				{
 					query += "SELECT '','','"+cuenta[0].ToString()+"','' "+
 							"UNION ALL "+
-							"SELECT id_partida, concat('a: ', cuenta_contable), haber, '' " +
+							"SELECT id_partida, concat('a: ', cuenta_contable), concat('Q.', haber), '' " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = "+idlibroMayor+" AND haber<>0 " +
 							"UNION ALL "+
-							"SELECT '','','', IF(ROUND(SUM(haber), 2) > 0, CONCAT('SALDO: ', ROUND(SUM(haber))), '') " +
+							"SELECT '','','', IF(ROUND(SUM(haber), 2) > 0, CONCAT('SALDO: Q.', ROUND(SUM(haber))), '') " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND haber<>0 " +
 							"UNION ALL "+
-							"SELECT id_partida, concat('por: ', cuenta_contable), debe, '' FROM libro_mayor_detalles " +
+							"SELECT id_partida, concat('por: ', cuenta_contable), concat('Q.', debe), '' FROM libro_mayor_detalles " +
 							"WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND debe<>0 " +
 							"UNION ALL "+
-							"SELECT '','','', IF((ROUND(SUM(debe), 2)) > 0, CONCAT('SALDO: ', ROUND(SUM(debe))), '') " +
+							"SELECT '','','', IF((ROUND(SUM(debe), 2)) > 0, CONCAT('SALDO: Q.', ROUND(SUM(debe))), '') " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND debe<>0 ;";
 				}
 				else
 				{
 					query += "SELECT '','','" + cuenta[0].ToString() + "','' " +
 							"UNION ALL " +
-							"SELECT id_partida, concat('a: ', cuenta_contable), haber, ''  " +
+							"SELECT id_partida, concat('a: ', cuenta_contable), concat('Q.', haber), ''  " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND haber<>0 " +
 							"UNION ALL " +
-							"SELECT '','','', IF(ROUND(SUM(haber), 2) > 0, CONCAT('SALDO: ', ROUND(SUM(haber))), '') " +
+							"SELECT '','','', IF(ROUND(SUM(haber), 2) > 0, CONCAT('SALDO: Q.', ROUND(SUM(haber))), '') " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND haber<>0 " +
 							"UNION ALL " +
-							"SELECT id_partida, concat('por: ', cuenta_contable), debe, '' FROM libro_mayor_detalles " +
+							"SELECT id_partida, concat('por: ', cuenta_contable), concat('Q.', debe), '' FROM libro_mayor_detalles " +
 							"WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND debe<>0 " +
 							"UNION ALL " +
-							"SELECT '','','', IF((ROUND(SUM(debe), 2)) > 0, CONCAT('SALDO: ', ROUND(SUM(debe))), '') " +
+							"SELECT '','','', IF((ROUND(SUM(debe), 2)) > 0, CONCAT('SALDO: Q.', ROUND(SUM(debe))), '') " +
 							"FROM libro_mayor_detalles WHERE cuenta_mayor = '" + cuenta[0].ToString() + "' AND id_libro_mayor = " + idlibroMayor + " AND debe<>0 UNION ALL ";
 				}
 				i++;

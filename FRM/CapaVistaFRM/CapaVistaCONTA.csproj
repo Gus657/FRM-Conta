@@ -65,6 +65,12 @@
     <Compile Include="cuentas_contables.Designer.cs">
       <DependentUpon>cuentas_contables.cs</DependentUpon>
     </Compile>
+    <Compile Include="balances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="balances.Designer.cs">
+      <DependentUpon>balances.cs</DependentUpon>
+    </Compile>
     <Compile Include="libro_Mayor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
   <ItemGroup>
     <EmbeddedResource Include="cuentas_contables.resx">
       <DependentUpon>cuentas_contables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="balances.resx">
+      <DependentUpon>balances.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libro_Mayor.resx">
       <DependentUpon>libro_Mayor.cs</DependentUpon>

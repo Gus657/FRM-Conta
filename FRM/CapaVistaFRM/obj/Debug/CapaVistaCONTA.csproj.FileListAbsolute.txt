@@ -84,3 +84,4 @@ C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVist
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.csproj.CopyComplete
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.dll
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.pdb
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.balances.resources
