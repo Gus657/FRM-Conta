@@ -48,7 +48,8 @@ namespace CapaVistaCONTA
 
         private void BalanceGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+			balances bal = new balances(Lbl_usuario.Text);
+			bal.Show();
         }
 
         private void TipoDeCambioToolStripMenuItem_Click(object sender, EventArgs e)

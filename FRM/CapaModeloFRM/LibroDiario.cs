@@ -65,10 +65,10 @@ namespace CapaModeloCONTA
 							query += "SELECT P.id_partida as No , P.concepto as CONCEPTO, P.fecha as FECHA , '' as DEBE , '' as HABER " +
 									"FROM partidas P WHERE P.id_partida =" + partida + " AND P.id_libro_diario = " + idLibro + "  " +
 									"UNION ALL " +
-									"SELECT '' as a, '' as a, D.cuenta_contable AS cuenta , D.debe as Debe, D.haber as haber " +
+									"SELECT '' as a, '' as a, D.cuenta_contable AS cuenta ,IF(D.debe>0,concat('Q.', D.debe),'')  as Debe, IF(D.haber>0,concat('Q.', D.haber),'')  as haber " +
 									"FROM libro_diario_detalles D WHERe D.id_partida =" + partida + " AND D.id_libro_diario =" + idLibro + " " +
 									"UNION ALL " +
-									"SELECT '' as a, '' as a,'SUMAS IGUALES' as b, ROUND(SUM(D.debe),2) as Debe, ROUND(SUM(D.haber),2) as haber " +
+									"SELECT '' as a, '' as a,'SUMAS IGUALES' as b, concat('Q.', ROUND(SUM(D.debe),2)) as Debe, concat('Q.', ROUND(SUM(D.haber),2))  as haber " +
 									"FROM libro_diario_detalles D WHERe D.id_partida = " + partida + " AND D.id_libro_diario = " + idLibro + " ;";
 						}
 						else
@@ -76,10 +76,10 @@ namespace CapaModeloCONTA
 							query += "SELECT P.id_partida as No , P.concepto as CONCEPTO, P.fecha as FECHA , '' as DEBE , '' as HABER " +
 									"FROM partidas P WHERE P.id_partida =" + partida + " AND P.id_libro_diario = " + idLibro + "  " +
 									"UNION ALL " +
-									"SELECT '' as a, '' as a, D.cuenta_contable AS cuenta , D.debe as Debe, D.haber as haber " +
+								"SELECT '' as a, '' as a, D.cuenta_contable AS cuenta ,IF(D.debe>0,concat('Q.', D.debe),'')  as Debe, IF(D.haber>0,concat('Q.', D.haber),'')  as haber " +
 									"FROM libro_diario_detalles D WHERe D.id_partida =" + partida + " AND D.id_libro_diario =" + idLibro + " " +
 									"UNION ALL " +
-									"SELECT '' as a, '' as a,'SUMAS IGUALES' as b, ROUND(SUM(D.debe), 2) as Debe, ROUND(SUM(D.haber), 2) as haber " +
+									"SELECT '' as a, '' as a,'SUMAS IGUALES' as b, concat('Q.', ROUND(SUM(D.debe),2)) as Debe , concat('Q.', ROUND(SUM(D.haber),2))  as haber " +
 									"FROM libro_diario_detalles D WHERe D.id_partida = " + partida + " AND D.id_libro_diario = " + idLibro + " UNION ALL ";
 						}
 

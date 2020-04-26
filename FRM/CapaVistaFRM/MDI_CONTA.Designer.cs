@@ -84,7 +84,7 @@
             this.tiposDeCuentasContablesToolStripMenuItem,
             this.tiposDePólizaToolStripMenuItem});
 			this.contabilidadToolStripMenuItem1.Name = "contabilidadToolStripMenuItem1";
-			this.contabilidadToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+			this.contabilidadToolStripMenuItem1.Size = new System.Drawing.Size(173, 24);
 			this.contabilidadToolStripMenuItem1.Text = "Contabilidad";
 			// 
 			// cuentasContablesToolStripMenuItem
@@ -112,9 +112,9 @@
 			// 
 			this.contabilidadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actualizaciónDePólizasToolStripMenuItem,
+            this.libroDiarioToolStripMenuItem,
             this.libroMayorToolStripMenuItem,
-            this.balanceGeneralToolStripMenuItem,
-            this.libroDiarioToolStripMenuItem});
+            this.balanceGeneralToolStripMenuItem});
 			this.contabilidadToolStripMenuItem.Name = "contabilidadToolStripMenuItem";
 			this.contabilidadToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
 			this.contabilidadToolStripMenuItem.Text = "Contabilidad";
@@ -138,7 +138,7 @@
 			// 
 			this.balanceGeneralToolStripMenuItem.Name = "balanceGeneralToolStripMenuItem";
 			this.balanceGeneralToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
-			this.balanceGeneralToolStripMenuItem.Text = "Balance General";
+			this.balanceGeneralToolStripMenuItem.Text = "Balance";
 			this.balanceGeneralToolStripMenuItem.Click += new System.EventHandler(this.BalanceGeneralToolStripMenuItem_Click);
 			// 
 			// libroDiarioToolStripMenuItem
