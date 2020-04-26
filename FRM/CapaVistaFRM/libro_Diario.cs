@@ -46,7 +46,7 @@ namespace CapaVistaCONTA
 			dt.Fill(table);
 			Dtg_LibroDiario.DataSource = table;
 		}
-
+		
 		void tablaMovimientos() {
 
 			DataGridViewComboBoxColumn cuenta = new DataGridViewComboBoxColumn();
@@ -167,6 +167,7 @@ namespace CapaVistaCONTA
 						MessageBox.Show("Por Favor llene la tabla en la fila " + (i+1).ToString()+" y Columna " + (j+1).ToString());
 						proceder = false;
 					}
+
 				}
 			}
 
@@ -315,6 +316,98 @@ namespace CapaVistaCONTA
 		{
 			exportarTabla(Dtg_Resumen,"test");
 			sn.insertarBitacora(user, "Exporto un libro Diario", "Libro Diario");
+		}
+
+		private void Dtg_LibroDiario_MouseEnter(object sender, EventArgs e)
+		{
+			ToolTip toolTip1 = new ToolTip();
+			toolTip1.AutoPopDelay = 5000;
+			toolTip1.ShowAlways = true;
+			toolTip1.ReshowDelay = 0;
+			toolTip1.SetToolTip(Dtg_LibroDiario, "Doble Click para modificar");
+		}
+
+		private void Dtg_Movimientos_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			
+		}
+
+		private void Dtg_Movimientos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		bool soloNumeros(string cadena)
+		{
+			bool borrar = false;
+			for (int i = 0; i < cadena.Length; i++)
+			{
+				if (
+					cadena[i] != '0' &&
+					cadena[i] != '1' &&
+					cadena[i] != '2' &&
+					cadena[i] != '3' &&
+					cadena[i] != '4' &&
+					cadena[i] != '5' &&
+					cadena[i] != '5' &&
+					cadena[i] != '7' &&
+					cadena[i] != '8' &&
+					cadena[i] != '9' &&
+					cadena[i] != '.' 
+
+					)
+				{
+					if (Dtg_Movimientos.CurrentCell.ColumnIndex != 0)
+					{
+						borrar = true;
+					}
+					
+					
+				}
+			}
+			if (borrar)
+			{
+				MessageBox.Show("Solo esta permitido escribir Enteros o Decimales");
+			}
+			return borrar;
+
+		}
+
+		bool soloUnPunto(string cadena)
+		{
+			bool borrar = false;
+			int conteo = 0;
+			for (int i = 0; i < cadena.Length; i++)
+			{
+				if (cadena[i] == '.')
+				{
+					if (Dtg_Movimientos.CurrentCell.ColumnIndex != 0)
+					{
+						conteo++;
+					}
+
+
+				}
+			}
+			if (conteo>1)
+			{
+				borrar = true;
+			}
+			if (borrar)
+			{
+				MessageBox.Show("El valor no posee el formato adecuado");
+			}
+			return borrar;
+		}
+
+		private void Dtg_Movimientos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+		{
+
+			if (soloNumeros(Dtg_Movimientos.CurrentCell.Value.ToString()) || soloUnPunto(Dtg_Movimientos.CurrentCell.Value.ToString()))
+			{
+				Dtg_Movimientos.CurrentCell.Value = "";
+			}
+			
 		}
 	}
 }

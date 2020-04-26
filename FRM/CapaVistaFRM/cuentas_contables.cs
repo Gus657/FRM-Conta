@@ -39,7 +39,7 @@ namespace CapaVistaCONTA {
 
 		void llenarCombosTipos() {
 			Cmb_Tipo.Items.AddRange(mod.ObtenerTIposCuentasContables());
-			Cmb_filtro.Items.AddRange(mod.ObtenerTIposCuentasContables());
+
 		}
 
 		private void Cuentas_contables_Load(object sender, EventArgs e)
@@ -59,13 +59,30 @@ namespace CapaVistaCONTA {
 					Txt_Id.Text += "." + (Convert.ToInt32(idTipo) + 1).ToString();
 				}
 			}
+			else
+			{
+				ToolTip toolTip1 = new ToolTip();
+				toolTip1.AutoPopDelay = 5000;
+				toolTip1.ShowAlways = true;
+				toolTip1.ReshowDelay = 0;
+				toolTip1.SetToolTip(Btn_guardar, "No es posible modificar el Tipo de Cuenta");
+			}
 			
 			
 		}
 
 		private void Btn_plusLevel_Click(object sender, EventArgs e)
 		{
-			if (estadoBtn == 0) { Txt_Id.Enabled = true; }else { Txt_Id.Enabled = false; }
+			if (estadoBtn == 0) {
+				Txt_Id.Enabled = true;
+			} else {
+				ToolTip toolTip1 = new ToolTip();
+				toolTip1.AutoPopDelay = 5000;
+				toolTip1.ShowAlways = true;
+				toolTip1.ReshowDelay = 0;
+				toolTip1.SetToolTip(Btn_plusLevel, "No se permite modificar el ID");
+				Txt_Id.Enabled = false;
+			}
 		}
 
 		private void Btn_guardar_Click(object sender, EventArgs e)
@@ -127,6 +144,30 @@ namespace CapaVistaCONTA {
 				estadoBtn = 0;
 				llenarCuentas();
 			}
+		}
+
+		private void Dtgv_Cuentas_MouseEnter(object sender, EventArgs e)
+		{
+			ToolTip toolTip1 = new ToolTip();
+			toolTip1.AutoPopDelay = 5000;
+			toolTip1.ShowAlways = true;
+			toolTip1.ReshowDelay = 0;
+			toolTip1.SetToolTip(Dtgv_Cuentas, "Doble Click para modificar");
+		}
+
+		private void Dtgv_Cuentas_CellEnter(object sender, DataGridViewCellEventArgs e)
+		{
+			
+		}
+
+		private void Dtgv_Cuentas_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			
+		}
+
+		private void Dtgv_Cuentas_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+		{
+			
 		}
 	}
 }
