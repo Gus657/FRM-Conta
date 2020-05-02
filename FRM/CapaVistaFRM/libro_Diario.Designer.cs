@@ -218,6 +218,7 @@
 			// 
 			// Cmb_Empresa_Modificar
 			// 
+			this.Cmb_Empresa_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Modificar.FormattingEnabled = true;
 			this.Cmb_Empresa_Modificar.Items.AddRange(new object[] {
             "BIenestar",
@@ -294,6 +295,7 @@
 			// 
 			// Cmb_Empresa_Crear
 			// 
+			this.Cmb_Empresa_Crear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Crear.FormattingEnabled = true;
 			this.Cmb_Empresa_Crear.Items.AddRange(new object[] {
             "Bienestar",
@@ -557,10 +559,10 @@
 			// 
 			this.tabPage3.Controls.Add(this.Dtg_Resumen);
 			this.tabPage3.Controls.Add(this.button2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 30);
+			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(1270, 529);
+			this.tabPage3.Size = new System.Drawing.Size(1270, 537);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Visualizar";
 			this.tabPage3.UseVisualStyleBackColor = true;

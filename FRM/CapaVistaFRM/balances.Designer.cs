@@ -219,6 +219,7 @@
 			// 
 			// Cmb_Empresa_Modificar
 			// 
+			this.Cmb_Empresa_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Modificar.FormattingEnabled = true;
 			this.Cmb_Empresa_Modificar.Location = new System.Drawing.Point(167, 56);
 			this.Cmb_Empresa_Modificar.Name = "Cmb_Empresa_Modificar";
@@ -283,6 +284,7 @@
 			// 
 			// Cmb_Empresa_Crear
 			// 
+			this.Cmb_Empresa_Crear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Crear.FormattingEnabled = true;
 			this.Cmb_Empresa_Crear.Location = new System.Drawing.Point(167, 99);
 			this.Cmb_Empresa_Crear.Name = "Cmb_Empresa_Crear";

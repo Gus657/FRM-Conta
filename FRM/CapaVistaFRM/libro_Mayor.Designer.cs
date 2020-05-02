@@ -215,6 +215,7 @@
 			// 
 			// Cmb_Empresa_Modificar
 			// 
+			this.Cmb_Empresa_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Modificar.FormattingEnabled = true;
 			this.Cmb_Empresa_Modificar.Location = new System.Drawing.Point(167, 56);
 			this.Cmb_Empresa_Modificar.Name = "Cmb_Empresa_Modificar";
@@ -279,6 +280,7 @@
 			// 
 			// Cmb_Empresa_Crear
 			// 
+			this.Cmb_Empresa_Crear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Crear.FormattingEnabled = true;
 			this.Cmb_Empresa_Crear.Location = new System.Drawing.Point(167, 99);
 			this.Cmb_Empresa_Crear.Name = "Cmb_Empresa_Crear";
@@ -326,10 +328,10 @@
 			this.tabPage2.Controls.Add(this.progressBar1);
 			this.tabPage2.Controls.Add(this.Btn_Guardar_partia);
 			this.tabPage2.Controls.Add(this.Dtg_Partidas);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Location = new System.Drawing.Point(4, 30);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1270, 537);
+			this.tabPage2.Size = new System.Drawing.Size(1270, 529);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Detalles";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -435,10 +437,10 @@
 			// 
 			this.tabPage3.Controls.Add(this.Dtg_Resumen);
 			this.tabPage3.Controls.Add(this.button2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 22);
+			this.tabPage3.Location = new System.Drawing.Point(4, 30);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(1270, 537);
+			this.tabPage3.Size = new System.Drawing.Size(1270, 529);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Visualizar";
 			this.tabPage3.UseVisualStyleBackColor = true;

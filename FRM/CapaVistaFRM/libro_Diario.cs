@@ -158,6 +158,20 @@ namespace CapaVistaCONTA
 			bool proceder = true;
 			int fil = Dtg_Movimientos.Rows.Count - 1;
 			int col = Dtg_Movimientos.Columns.Count;
+			decimal debe = 0;
+			decimal haber = 0;
+	
+			if (fil==0)
+			{
+				MessageBox.Show("No se han ingresado partidas");
+				proceder = false;
+			}
+			if (Txt_Concepto.Text=="")
+			{
+				MessageBox.Show("Por favor coloque un un concepto a la partida");
+				proceder = false;
+			}
+
 			for (int i = 0; i < fil; i++)
 			{
 				for (int j = 0; j < col; j++)
@@ -167,8 +181,23 @@ namespace CapaVistaCONTA
 						MessageBox.Show("Por Favor llene la tabla en la fila " + (i+1).ToString()+" y Columna " + (j+1).ToString());
 						proceder = false;
 					}
+					else if (Dtg_Movimientos.Rows[i].Cells[j].Value.ToString() =="" || Dtg_Movimientos.Rows[i].Cells[j].Value.ToString()==" ")
+					{
+						MessageBox.Show("Por Favor llene la tabla en la fila " + (i + 1).ToString() + " y Columna " + (j + 1).ToString());
+						proceder = false;
+					}
 
 				}
+			}
+			for (int i = 0; i < Dtg_Movimientos.Rows.Count-1; i++)
+			{
+				debe += Convert.ToDecimal( Dtg_Movimientos.Rows[i].Cells[1].Value);
+				haber += Convert.ToDecimal(Dtg_Movimientos.Rows[i].Cells[2].Value);
+			}
+			if (debe!=haber)
+			{
+				MessageBox.Show("Las sumas no son iguales, revise ambas columnas");
+				proceder = false;
 			}
 
 			if (proceder)
@@ -237,7 +266,7 @@ namespace CapaVistaCONTA
 			}
 			else
 			{
-				concepto = Dtg_Partidas.CurrentRow.Cells[0].Value.ToString();
+				concepto = Dtg_Partidas.CurrentRow.Cells[1].Value.ToString();
 				DialogResult Eliminar;
 				Eliminar = MessageBox.Show("Se eliminarán todos los movimientos con concepto " + concepto + ", desea continuar?", "Eliminar Partida", MessageBoxButtons.YesNo);
 
@@ -349,7 +378,7 @@ namespace CapaVistaCONTA
 					cadena[i] != '3' &&
 					cadena[i] != '4' &&
 					cadena[i] != '5' &&
-					cadena[i] != '5' &&
+					cadena[i] != '6' &&
 					cadena[i] != '7' &&
 					cadena[i] != '8' &&
 					cadena[i] != '9' &&
