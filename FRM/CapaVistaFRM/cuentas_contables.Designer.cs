@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cuentas_contables));
 			this.Cmb_Tipo = new System.Windows.Forms.ComboBox();
 			this.Txt_nombre = new System.Windows.Forms.TextBox();
@@ -47,8 +47,6 @@
 			this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.label5 = new System.Windows.Forms.Label();
-			this.Cmb_filtro = new System.Windows.Forms.ComboBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +59,7 @@
 			// 
 			// Cmb_Tipo
 			// 
+			this.Cmb_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Tipo.FormattingEnabled = true;
 			this.Cmb_Tipo.Location = new System.Drawing.Point(41, 145);
 			this.Cmb_Tipo.Name = "Cmb_Tipo";
@@ -192,27 +191,27 @@
 			// Dtgv_Cuentas
 			// 
 			this.Dtgv_Cuentas.AllowUserToAddRows = false;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkRed;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.Dtgv_Cuentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkRed;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.IndianRed;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.Dtgv_Cuentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.Dtgv_Cuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Dtgv_Cuentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Cuenta,
             this.estado});
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkRed;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.Dtgv_Cuentas.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkRed;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.Dtgv_Cuentas.DefaultCellStyle = dataGridViewCellStyle4;
 			this.Dtgv_Cuentas.Location = new System.Drawing.Point(12, 395);
 			this.Dtgv_Cuentas.Name = "Dtgv_Cuentas";
 			this.Dtgv_Cuentas.ReadOnly = true;
@@ -221,6 +220,10 @@
 			this.Dtgv_Cuentas.TabIndex = 7;
 			this.Dtgv_Cuentas.TabStop = false;
 			this.Dtgv_Cuentas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtgv_Cuentas_CellDoubleClick);
+			this.Dtgv_Cuentas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtgv_Cuentas_CellEnter);
+			this.Dtgv_Cuentas.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtgv_Cuentas_CellMouseEnter);
+			this.Dtgv_Cuentas.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Dtgv_Cuentas_CellMouseMove);
+			this.Dtgv_Cuentas.MouseEnter += new System.EventHandler(this.Dtgv_Cuentas_MouseEnter);
 			// 
 			// Código
 			// 
@@ -242,24 +245,6 @@
 			this.estado.Name = "estado";
 			this.estado.ReadOnly = true;
 			this.estado.Width = 200;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(21, 336);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(52, 21);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Filtrar";
-			// 
-			// Cmb_filtro
-			// 
-			this.Cmb_filtro.FormattingEnabled = true;
-			this.Cmb_filtro.Location = new System.Drawing.Point(79, 333);
-			this.Cmb_filtro.Name = "Cmb_filtro";
-			this.Cmb_filtro.Size = new System.Drawing.Size(185, 29);
-			this.Cmb_filtro.TabIndex = 10;
 			// 
 			// panel1
 			// 
@@ -315,16 +300,15 @@
 			this.ClientSize = new System.Drawing.Size(1117, 762);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.Cmb_filtro);
-			this.Controls.Add(this.label5);
 			this.Controls.Add(this.Dtgv_Cuentas);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ForeColor = System.Drawing.Color.Black;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "cuentas_contables";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "5101 - Cuentas Contables";
+			this.Text = "5112 - Cuentas Contables";
 			this.Load += new System.EventHandler(this.Cuentas_contables_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
@@ -333,7 +317,6 @@
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
         }
 
@@ -351,8 +334,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.DataGridView Dtgv_Cuentas;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ComboBox Cmb_filtro;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label6;

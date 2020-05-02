@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.navegador1 = new CapaDeDiseno.Navegador();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mantenimiento_tipos_cuentas_contables));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.navegador1 = new CapaDeDiseno.Navegador();
 			this.SuspendLayout();
-			// 
-			// navegador1
-			// 
-			this.navegador1.AutoSize = true;
-			this.navegador1.BackColor = System.Drawing.Color.White;
-			this.navegador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.navegador1.Location = new System.Drawing.Point(0, 59);
-			this.navegador1.Margin = new System.Windows.Forms.Padding(5);
-			this.navegador1.Name = "navegador1";
-			this.navegador1.Size = new System.Drawing.Size(838, 620);
-			this.navegador1.TabIndex = 0;
-			this.navegador1.Load += new System.EventHandler(this.Navegador1_Load);
 			// 
 			// panel1
 			// 
@@ -53,28 +42,38 @@
 			this.panel1.Size = new System.Drawing.Size(840, 83);
 			this.panel1.TabIndex = 1;
 			// 
+			// navegador1
+			// 
+			this.navegador1.BackColor = System.Drawing.Color.White;
+			this.navegador1.Location = new System.Drawing.Point(3, 80);
+			this.navegador1.Name = "navegador1";
+			this.navegador1.Size = new System.Drawing.Size(837, 642);
+			this.navegador1.TabIndex = 2;
+			this.navegador1.Load += new System.EventHandler(this.Navegador1_Load_1);
+			// 
 			// mantenimiento_tipos_cuentas_contables
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(840, 681);
-			this.Controls.Add(this.panel1);
+			this.ClientSize = new System.Drawing.Size(840, 721);
 			this.Controls.Add(this.navegador1);
+			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ForeColor = System.Drawing.Color.Black;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "mantenimiento_tipos_cuentas_contables";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Tipos de Cuentas contables";
+			this.Text = "5111 - Tipos de Cuentas contables";
 			this.Load += new System.EventHandler(this.Mantenimiento_tipos_cuentas_contables_Load);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
         }
 
         #endregion
 
-        private CapaDeDiseno.Navegador navegador1;
+       
         private System.Windows.Forms.Panel panel1;
-    }
+		private CapaDeDiseno.Navegador navegador1;
+	}
 }

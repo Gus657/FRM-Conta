@@ -36,6 +36,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(libro_Diario));
 			this.Tbc_LibroDiario = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.Btn_Partidas = new System.Windows.Forms.Button();
@@ -68,21 +69,21 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
 			this.Dtg_Partidas = new System.Windows.Forms.DataGridView();
-			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.button2 = new System.Windows.Forms.Button();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.Dtg_Resumen = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.button2 = new System.Windows.Forms.Button();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.Tbc_LibroDiario.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_LibroDiario)).BeginInit();
@@ -93,8 +94,8 @@
 			this.Gpb_Partida.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Partidas)).BeginInit();
 			this.tabPage3.SuspendLayout();
-			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Resumen)).BeginInit();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Tbc_LibroDiario
@@ -165,6 +166,7 @@
 			this.Dtg_LibroDiario.Size = new System.Drawing.Size(813, 443);
 			this.Dtg_LibroDiario.TabIndex = 9;
 			this.Dtg_LibroDiario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_LibroDiario_CellContentDoubleClick);
+			this.Dtg_LibroDiario.MouseEnter += new System.EventHandler(this.Dtg_LibroDiario_MouseEnter);
 			// 
 			// Gpb_Modificar
 			// 
@@ -216,6 +218,7 @@
 			// 
 			// Cmb_Empresa_Modificar
 			// 
+			this.Cmb_Empresa_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Modificar.FormattingEnabled = true;
 			this.Cmb_Empresa_Modificar.Items.AddRange(new object[] {
             "BIenestar",
@@ -292,6 +295,7 @@
 			// 
 			// Cmb_Empresa_Crear
 			// 
+			this.Cmb_Empresa_Crear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Crear.FormattingEnabled = true;
 			this.Cmb_Empresa_Crear.Items.AddRange(new object[] {
             "Bienestar",
@@ -407,6 +411,9 @@
 			this.Dtg_Movimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Dtg_Movimientos.Size = new System.Drawing.Size(593, 329);
 			this.Dtg_Movimientos.TabIndex = 3;
+			this.Dtg_Movimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Movimientos_CellEndEdit);
+			this.Dtg_Movimientos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Movimientos_CellValueChanged);
+			this.Dtg_Movimientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dtg_Movimientos_KeyPress);
 			// 
 			// Gpb_Partida
 			// 
@@ -511,55 +518,6 @@
 			this.Dtg_Partidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
 			this.Dtg_Partidas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Partidas_CellContentDoubleClick);
 			// 
-			// tabPage3
-			// 
-			this.tabPage3.Controls.Add(this.Dtg_Resumen);
-			this.tabPage3.Controls.Add(this.button2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 30);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(1270, 529);
-			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Text = "Visualizar";
-			this.tabPage3.UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this.button2.BackColor = System.Drawing.Color.Firebrick;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.ForeColor = System.Drawing.Color.White;
-			this.button2.Location = new System.Drawing.Point(1124, 29);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(119, 35);
-			this.button2.TabIndex = 18;
-			this.button2.Text = "PDF";
-			this.button2.UseVisualStyleBackColor = false;
-			this.button2.Click += new System.EventHandler(this.Button2_Click);
-			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.Firebrick;
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.ForeColor = System.Drawing.Color.Black;
-			this.panel1.Location = new System.Drawing.Point(2, 2);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1278, 102);
-			this.panel1.TabIndex = 1;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(39, 21);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(219, 46);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Libro Diario";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// Column1
 			// 
 			this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -596,6 +554,18 @@
 			this.Column5.HeaderText = "HABER";
 			this.Column5.Name = "Column5";
 			this.Column5.ReadOnly = true;
+			// 
+			// tabPage3
+			// 
+			this.tabPage3.Controls.Add(this.Dtg_Resumen);
+			this.tabPage3.Controls.Add(this.button2);
+			this.tabPage3.Location = new System.Drawing.Point(4, 22);
+			this.tabPage3.Name = "tabPage3";
+			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage3.Size = new System.Drawing.Size(1270, 537);
+			this.tabPage3.TabIndex = 2;
+			this.tabPage3.Text = "Visualizar";
+			this.tabPage3.UseVisualStyleBackColor = true;
 			// 
 			// Dtg_Resumen
 			// 
@@ -673,6 +643,43 @@
 			this.dataGridViewTextBoxColumn5.ReadOnly = true;
 			this.dataGridViewTextBoxColumn5.Width = 150;
 			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.Firebrick;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.ForeColor = System.Drawing.Color.White;
+			this.button2.Location = new System.Drawing.Point(1124, 29);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(119, 35);
+			this.button2.TabIndex = 18;
+			this.button2.Text = "PDF";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.Button2_Click);
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.Color.Firebrick;
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.ForeColor = System.Drawing.Color.Black;
+			this.panel1.Location = new System.Drawing.Point(2, 2);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(1278, 102);
+			this.panel1.TabIndex = 1;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(39, 21);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(219, 46);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Libro Diario";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// libro_Diario
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -681,8 +688,10 @@
 			this.Controls.Add(this.Tbc_LibroDiario);
 			this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "libro_Diario";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "5121 - Libro Diario";
 			this.Load += new System.EventHandler(this.Libro_Diario_Load);
 			this.Tbc_LibroDiario.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
@@ -697,9 +706,9 @@
 			this.Gpb_Partida.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Partidas)).EndInit();
 			this.tabPage3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.Dtg_Resumen)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.Dtg_Resumen)).EndInit();
 			this.ResumeLayout(false);
 
 		}

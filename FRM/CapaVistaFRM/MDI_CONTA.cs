@@ -15,12 +15,11 @@ namespace CapaVistaCONTA
     public partial class MDI_CONTA : Form
     {
 
-		private mantenimiento_tipos_cuentas_contables frm_tipo_cuentas_contables;
 		private cuentas_contables frm_cuentas_contables;
 		private libro_Diario frm_libro_diario;
 
 		sentencia sn = new sentencia();
-		String usuarioActivo = "rchocm";
+		string usuarioActivo = "";
         public MDI_CONTA()
         {
             InitializeComponent();
@@ -33,8 +32,7 @@ namespace CapaVistaCONTA
       
      
      
-		private void frm_tipo_cuentas_contables_FormClosed(Object sender, FormClosedEventArgs e)
-		{ frm_tipo_cuentas_contables = null; }
+		
 		private void frm_cuentas_contables_FormClosed(Object sender, FormClosedEventArgs e)
 		{ frm_cuentas_contables = null; }
 		private void frm_libro_diario_FormClosed(Object sender, FormClosedEventArgs e)
@@ -88,9 +86,7 @@ namespace CapaVistaCONTA
 
         private void SeguridadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MDI_Seguridad seguridad = new MDI_Seguridad(Lbl_usuario.Text);
-            seguridad.lbl_nombreUsuario.Text = Lbl_usuario.Text;
-            seguridad.ShowDialog();
+            
         }
 
         private void Btn_prueba_Click(object sender, EventArgs e)
@@ -142,7 +138,7 @@ namespace CapaVistaCONTA
 		{
 			if (frm_libro_diario == null)
 			{
-				frm_libro_diario = new libro_Diario(usuarioActivo);
+				frm_libro_diario = new libro_Diario(Lbl_usuario.Text);
 				frm_libro_diario.MdiParent = this;
 				frm_libro_diario.FormClosed += new FormClosedEventHandler(frm_libro_diario_FormClosed);
 				frm_libro_diario.Show();
@@ -160,20 +156,27 @@ namespace CapaVistaCONTA
 
 		private void TiposDeCuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (frm_tipo_cuentas_contables == null)
-			{
-				frm_tipo_cuentas_contables = new mantenimiento_tipos_cuentas_contables(usuarioActivo);
-				frm_tipo_cuentas_contables.MdiParent = this;
-				frm_tipo_cuentas_contables.FormClosed += new FormClosedEventHandler(frm_tipo_cuentas_contables_FormClosed);
-				frm_tipo_cuentas_contables.Show();
-			}
-			else
-			{
-				frm_tipo_cuentas_contables.Activate();
-			}
+
+			
 		}
 
 		private void CuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void ContabilidadToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void LibroMayorToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			libro_Mayor nuevo = new libro_Mayor(usuarioActivo);
+			nuevo.Show();
+		}
+
+		private void CuentasContablesToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			if (frm_cuentas_contables == null)
 			{
@@ -188,15 +191,18 @@ namespace CapaVistaCONTA
 			}
 		}
 
-		private void ContabilidadToolStripMenuItem_Click(object sender, EventArgs e)
+		private void TiposDeCuentasContablesToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-
+			mantenimiento_tipos_cuentas_contables mt = new mantenimiento_tipos_cuentas_contables(Lbl_usuario.Text);
+			mt.MdiParent = this;
+			mt.Show();
 		}
 
-		private void LibroMayorToolStripMenuItem_Click(object sender, EventArgs e)
+		private void SeguridadToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			libro_Mayor nuevo = new libro_Mayor(usuarioActivo);
-			nuevo.Show();
+			MDI_Seguridad seguridad = new MDI_Seguridad(Lbl_usuario.Text);
+			seguridad.lbl_nombreUsuario.Text = Lbl_usuario.Text;
+			seguridad.ShowDialog();
 		}
 	}
 }

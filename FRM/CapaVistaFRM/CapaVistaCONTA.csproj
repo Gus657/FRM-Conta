@@ -35,9 +35,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DLLS\Seguridad\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
     </Reference>
+    <Reference Include="CapaDeDatos">
+      <HintPath>..\..\..\..\PruebaSeg\Navegador\CapaDeDiseno\bin\Debug\CapaDeDatos.dll</HintPath>
+    </Reference>
     <Reference Include="CapaDeDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLLS\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+      <HintPath>..\DLLS\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDeLogica">
+      <HintPath>..\..\..\..\PruebaSeg\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll</HintPath>
     </Reference>
     <Reference Include="CapaDiseno">
       <HintPath>..\..\DLLS\Seguridad\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
