@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="estado-de-resultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estado-de-resultados.Designer.cs">
+      <DependentUpon>estado-de-resultados.cs</DependentUpon>
+    </Compile>
     <Compile Include="balance-general.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="estado-de-resultados.resx">
+      <DependentUpon>estado-de-resultados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="balance-general.resx">
       <DependentUpon>balance-general.cs</DependentUpon>
     </EmbeddedResource>

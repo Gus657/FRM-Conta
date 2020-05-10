@@ -210,5 +210,11 @@ namespace CapaVistaCONTA
 			balance_general bal = new balance_general(Lbl_usuario.Text);
 			bal.Show();
 		}
+
+		private void EstadoDeResultadosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			estado_de_resultados bal = new estado_de_resultados(Lbl_usuario.Text);
+			bal.Show();
+		}
 	}
 }
