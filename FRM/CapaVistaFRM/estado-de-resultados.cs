@@ -19,7 +19,7 @@ namespace CapaVistaCONTA
 {
 	public partial class estado_de_resultados : Form
 	{
-		BalanceGeneral Libro = new BalanceGeneral();
+		EstadoDeResultados Libro = new EstadoDeResultados();
 		sentencia sn = new sentencia();
 		string user = "";
 		string idLibro = "";
@@ -121,7 +121,7 @@ namespace CapaVistaCONTA
 			llenarLibros();
 			Gpb_Crear.Enabled = true;
 			Btn_Partidas.Enabled = true;
-			sn.insertarBitacora(user, "Modifico un Balance", "balance-general");
+			sn.insertarBitacora(user, "Modifico un Estado de Resultados", "Estado de Resultados");
 		}
 
 		private void Btn_Partidas_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace CapaVistaCONTA
 				Tbc_LibroDiario.SelectedIndex = 2;
 			}
 			
-			sn.insertarBitacora(user, "Vio un Balance General", "balance-general");
+			sn.insertarBitacora(user, "Vio un Estado De Resultados", "Estado De resultados");
 
 		}
 
@@ -165,7 +165,7 @@ namespace CapaVistaCONTA
 			}
 			else
 			{
-				MessageBox.Show("El Balance General #" + Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()+" Ya ha sido Generado ");
+				MessageBox.Show("El Estado de Resultados #" + Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()+" Ya ha sido Generado ");
 				Tbc_LibroDiario.SelectedIndex = 2;
 				//lenar tabla
 				OdbcDataAdapter dt = Libro.llenarBalance(idLibro2);
@@ -201,7 +201,7 @@ namespace CapaVistaCONTA
 				{
 					if (Tbc_LibroDiario.SelectedIndex != 0)
 					{
-						MessageBox.Show("El Balance General #" + Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString() + " Ya ha sido Generado ");
+						MessageBox.Show("El Estado de Resultados #" + Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString() + " Ya ha sido Generado ");
 						Tbc_LibroDiario.SelectedIndex = 2;
 						//lenar tabla
 						OdbcDataAdapter dt = Libro.llenarBalance(idLibro2);
@@ -304,7 +304,7 @@ namespace CapaVistaCONTA
 		private void Button2_Click(object sender, EventArgs e)
 		{
 			exportarTabla(Dtg_Resumen,"test");
-			sn.insertarBitacora(user, "Exporto un libro Diario", "Libro Diario");
+			sn.insertarBitacora(user, "Exporto un Estado de resultados", "Estado de Resultados");
 		}
 
 		private void Timer1_Tick(object sender, EventArgs e)
