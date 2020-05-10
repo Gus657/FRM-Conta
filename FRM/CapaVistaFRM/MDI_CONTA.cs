@@ -204,5 +204,11 @@ namespace CapaVistaCONTA
 			seguridad.lbl_nombreUsuario.Text = Lbl_usuario.Text;
 			seguridad.ShowDialog();
 		}
+
+		private void BALANCEGENERALToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			balance_general bal = new balance_general(Lbl_usuario.Text);
+			bal.Show();
+		}
 	}
 }

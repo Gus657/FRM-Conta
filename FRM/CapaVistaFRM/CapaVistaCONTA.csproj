@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="balance-general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="balance-general.Designer.cs">
+      <DependentUpon>balance-general.cs</DependentUpon>
+    </Compile>
     <Compile Include="cuentas_contables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="balance-general.resx">
+      <DependentUpon>balance-general.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cuentas_contables.resx">
       <DependentUpon>cuentas_contables.cs</DependentUpon>
     </EmbeddedResource>
