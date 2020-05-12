@@ -111,7 +111,11 @@ namespace CapaModeloCONTA
 		public string IdLibro() {
 			return Diario.ObtenerIdLibro();
 		}
+		public string[] ComboDiario()
+		{
 
+			return Diario.llenarComboDiarios().Split(',');
+		}
 		public string IdPartida(string no)
 		{
 			return Diario.ObtenerIdPartida(no);

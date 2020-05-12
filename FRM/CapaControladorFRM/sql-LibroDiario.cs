@@ -21,6 +21,39 @@ namespace CapaControladorCONTA
 			OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, conectar.conexion("ERP"));
 			return dataTable;
 		}
+		public string llenarComboDiarios()
+		{
+			string Combo = "";
+			int numeroFIlas = 0;
+			OdbcCommand command = new OdbcCommand("SELECT nombre FROM empresas WHERE estado =1;", conectar.conexion("ERP"));
+			OdbcDataReader reader = command.ExecuteReader();
+			if (reader.HasRows)
+			{
+				while (reader.Read())
+				{
+					numeroFIlas++;
+				}
+				reader.Close();
+				OdbcDataReader reader2 = command.ExecuteReader();
+				for (int i = 0; i < numeroFIlas; i++)
+				{
+					reader2.Read();
+					if (i == numeroFIlas - 1)
+					{
+						Combo += reader2.GetValue(0).ToString();
+					}
+					else
+					{
+						Combo += reader2.GetValue(0).ToString() + ",";
+					}
+				}
+			}
+			else
+			{
+				Combo = "No Hay Registros";
+			}
+			return Combo;
+		}
 		public string[] llenarCombo()
 		{
 			string[] Combo = new string[30];

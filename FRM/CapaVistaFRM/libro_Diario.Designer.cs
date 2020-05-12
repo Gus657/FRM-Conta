@@ -220,9 +220,6 @@
 			// 
 			this.Cmb_Empresa_Modificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Modificar.FormattingEnabled = true;
-			this.Cmb_Empresa_Modificar.Items.AddRange(new object[] {
-            "BIenestar",
-            " Montreal"});
 			this.Cmb_Empresa_Modificar.Location = new System.Drawing.Point(167, 56);
 			this.Cmb_Empresa_Modificar.Name = "Cmb_Empresa_Modificar";
 			this.Cmb_Empresa_Modificar.Size = new System.Drawing.Size(200, 29);
@@ -297,9 +294,6 @@
 			// 
 			this.Cmb_Empresa_Crear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Cmb_Empresa_Crear.FormattingEnabled = true;
-			this.Cmb_Empresa_Crear.Items.AddRange(new object[] {
-            "Bienestar",
-            "Montreal"});
 			this.Cmb_Empresa_Crear.Location = new System.Drawing.Point(167, 99);
 			this.Cmb_Empresa_Crear.Name = "Cmb_Empresa_Crear";
 			this.Cmb_Empresa_Crear.Size = new System.Drawing.Size(200, 29);
@@ -348,10 +342,10 @@
 			this.tabPage2.Controls.Add(this.Dtg_Movimientos);
 			this.tabPage2.Controls.Add(this.Gpb_Partida);
 			this.tabPage2.Controls.Add(this.Dtg_Partidas);
-			this.tabPage2.Location = new System.Drawing.Point(4, 30);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1270, 529);
+			this.tabPage2.Size = new System.Drawing.Size(1270, 537);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Partidas";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -671,11 +665,11 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(39, 21);
+			this.label1.Location = new System.Drawing.Point(25, 7);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(219, 46);
+			this.label1.Size = new System.Drawing.Size(376, 79);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Libro Diario";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

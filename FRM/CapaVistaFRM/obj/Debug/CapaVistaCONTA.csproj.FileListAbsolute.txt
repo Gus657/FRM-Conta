@@ -97,3 +97,4 @@ C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CapaLogi
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CapaDatos_Consultas.pdb
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.balance_general.resources
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.estado_de_resultados.resources
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.mantenimiento_empresas.resources

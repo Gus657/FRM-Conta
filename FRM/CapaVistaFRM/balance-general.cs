@@ -127,7 +127,10 @@ namespace CapaVistaCONTA
 		private void Btn_Partidas_Click(object sender, EventArgs e)
 		{
 			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+			MessageBox.Show("GEENRAL "+idLibro);
+
 			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
+			MessageBox.Show("BALANCE "+idLibro2);
 			if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString())=="0")
 			{
 				Tbc_LibroDiario.SelectedIndex = 1;
@@ -190,7 +193,10 @@ namespace CapaVistaCONTA
 		private void Tbc_LibroDiario_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+			MessageBox.Show("GEENRAL " + idLibro);
+
 			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
+			MessageBox.Show("BALANCE " + idLibro2);
 			if (Tbc_LibroDiario.SelectedIndex!=0)
 			{
 				if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()) == "0")

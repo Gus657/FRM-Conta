@@ -95,6 +95,12 @@
     <Compile Include="libro_Mayor.Designer.cs">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
     </Compile>
+    <Compile Include="mantenimiento_empresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_empresas.Designer.cs">
+      <DependentUpon>mantenimiento_empresas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI_CONTA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="libro_Mayor.resx">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_empresas.resx">
+      <DependentUpon>mantenimiento_empresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_CONTA.resx">
       <DependentUpon>MDI_CONTA.cs</DependentUpon>

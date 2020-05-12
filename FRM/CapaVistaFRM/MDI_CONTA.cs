@@ -216,5 +216,11 @@ namespace CapaVistaCONTA
 			estado_de_resultados bal = new estado_de_resultados(Lbl_usuario.Text);
 			bal.Show();
 		}
+
+		private void EmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			mantenimiento_empresas mantenimiento = new mantenimiento_empresas(Lbl_usuario.Text);
+			mantenimiento.Show();
+		}
 	}
 }

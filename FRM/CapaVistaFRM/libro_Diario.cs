@@ -67,7 +67,8 @@ namespace CapaVistaCONTA
 		
 		private void Libro_Diario_Load(object sender, EventArgs e)
 		{
-
+			Cmb_Empresa_Crear.Items.AddRange(Libro.ComboDiario());
+			Cmb_Empresa_Modificar.Items.AddRange(Libro.ComboDiario());
 		}
 
 		private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

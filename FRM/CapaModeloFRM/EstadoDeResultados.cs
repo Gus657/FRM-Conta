@@ -124,36 +124,36 @@ namespace CapaModeloCONTA
 
 			string query = "SELECT 'INGRESOS', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles  WHERE id_estado_de_resultado = 1 AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)  "+                                                           
+							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles  WHERE id_estado_de_resultado = " + idBalance + " AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)  " +                                                           
 							"UNION ALL "+
-							"SELECT 'TOTAL INGRESOS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT 'TOTAL INGRESOS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
 							"SELECT 'COMPRAS', '','','' "+
 							"UNION ALL " +
-							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL COMPRAS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  )  " +
+							"SELECT 'TOTAL COMPRAS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  )  " +
 							"UNION ALL " +
 							"SELECT 'GANANCIA DE VENTAS','','', " +
 							"ROUND(( "+
-							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) "+
+							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"- "+
-							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) "+
+							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"),2) "+
 							"UNION ALL "+
 							"SELECT 'GASTOS', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable, saldo,'','' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL GASTOS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  ) " + 
+							"SELECT 'TOTAL GASTOS','',ROUND(SUM(saldo),2),'' FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  ) " + 
 							"UNION ALL "+
 							"SELECT 'GANANCIA DEL EJERCICIO ANTES DE IMPUESTO','','', "+
 							"ROUND(( "+
-							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) "+
+							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '4.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"- "+
-							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) "+
+							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '5.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"- "+
-							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = 1 AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) "+
+							"(SELECT SUM(saldo) FROM estado_de_resultados_detalles   WHERE id_estado_de_resultado = " + idBalance + " AND '6.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"),2) ;";
 
 
