@@ -57,6 +57,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.button6 = new System.Windows.Forms.Button();
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
 			this.Btn_Guardar_partia = new System.Windows.Forms.Button();
 			this.Dtg_Partidas = new System.Windows.Forms.DataGridView();
@@ -65,6 +66,7 @@
 			this.Parcial = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.button3 = new System.Windows.Forms.Button();
 			this.Dtg_Resumen = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +76,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.button5 = new System.Windows.Forms.Button();
 			this.Tbc_LibroDiario.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_LibroDiario)).BeginInit();
@@ -325,6 +328,8 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.button5);
+			this.tabPage2.Controls.Add(this.button6);
 			this.tabPage2.Controls.Add(this.progressBar1);
 			this.tabPage2.Controls.Add(this.Btn_Guardar_partia);
 			this.tabPage2.Controls.Add(this.Dtg_Partidas);
@@ -335,6 +340,21 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Detalles";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// button6
+			// 
+			this.button6.BackColor = System.Drawing.Color.Firebrick;
+			this.button6.FlatAppearance.BorderSize = 0;
+			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.ForeColor = System.Drawing.Color.White;
+			this.button6.Location = new System.Drawing.Point(6, 455);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(95, 35);
+			this.button6.TabIndex = 22;
+			this.button6.Text = "Inicio";
+			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.Button6_Click);
 			// 
 			// progressBar1
 			// 
@@ -357,7 +377,7 @@
 			this.Btn_Guardar_partia.Name = "Btn_Guardar_partia";
 			this.Btn_Guardar_partia.Size = new System.Drawing.Size(129, 73);
 			this.Btn_Guardar_partia.TabIndex = 4;
-			this.Btn_Guardar_partia.Text = "Guardar";
+			this.Btn_Guardar_partia.Text = "Generar Mayor";
 			this.Btn_Guardar_partia.UseVisualStyleBackColor = false;
 			this.Btn_Guardar_partia.Click += new System.EventHandler(this.Btn_Guardar_partia_Click);
 			// 
@@ -435,6 +455,7 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.button3);
 			this.tabPage3.Controls.Add(this.Dtg_Resumen);
 			this.tabPage3.Controls.Add(this.button2);
 			this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -444,6 +465,21 @@
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Visualizar";
 			this.tabPage3.UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.Firebrick;
+			this.button3.FlatAppearance.BorderSize = 0;
+			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.ForeColor = System.Drawing.Color.White;
+			this.button3.Location = new System.Drawing.Point(1054, 448);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(192, 35);
+			this.button3.TabIndex = 24;
+			this.button3.Text = "Inicio";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
 			// Dtg_Resumen
 			// 
@@ -522,7 +558,7 @@
 			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.ForeColor = System.Drawing.Color.White;
-			this.button2.Location = new System.Drawing.Point(1031, 470);
+			this.button2.Location = new System.Drawing.Point(1054, 49);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(192, 35);
 			this.button2.TabIndex = 18;
@@ -555,6 +591,21 @@
 			// timer1
 			// 
 			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.Firebrick;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.ForeColor = System.Drawing.Color.White;
+			this.button5.Location = new System.Drawing.Point(107, 455);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(96, 35);
+			this.button5.TabIndex = 23;
+			this.button5.Text = "Visualizar";
+			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.Button5_Click);
 			// 
 			// libro_Mayor
 			// 
@@ -626,5 +677,8 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button5;
 	}
 }

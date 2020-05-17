@@ -56,7 +56,9 @@ namespace CapaVistaCONTA
 		
 		private void balance_general_Load(object sender, EventArgs e)
 		{
-
+			Tbc_LibroDiario.Appearance = TabAppearance.FlatButtons;
+			Tbc_LibroDiario.ItemSize = new Size(0, 1);
+			Tbc_LibroDiario.SizeMode = TabSizeMode.Fixed;
 		}
 
 		private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -126,18 +128,29 @@ namespace CapaVistaCONTA
 
 		private void Btn_Partidas_Click(object sender, EventArgs e)
 		{
-			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
-			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
-			if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString())=="0")
+
+			if (Dtg_LibroDiario.Rows.Count != 0)
 			{
-				Tbc_LibroDiario.SelectedIndex = 1;
+				idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+
+
+				idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
+
+				if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()) == "0")
+				{
+					Tbc_LibroDiario.SelectedIndex = 1;
+				}
+				else
+				{
+					Tbc_LibroDiario.SelectedIndex = 2;
+				}
+
+				sn.insertarBitacora(user, "Vio un Balance General", "balance-general");
 			}
 			else
 			{
-				Tbc_LibroDiario.SelectedIndex = 2;
+				MessageBox.Show("No Hay Balances disponibles");
 			}
-			
-			sn.insertarBitacora(user, "Vio un Balance General", "balance-general");
 
 		}
 
@@ -190,19 +203,11 @@ namespace CapaVistaCONTA
 		private void Tbc_LibroDiario_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+			
+
 			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
-			if (Tbc_LibroDiario.SelectedIndex!=0)
-			{
-				if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()) == "0")
-				{
-					Tbc_LibroDiario.SelectedIndex = 1;
-				}
-				else
-				{
-					if (Tbc_LibroDiario.SelectedIndex != 0)
-					{
-						MessageBox.Show("El Balance General #" + Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString() + " Ya ha sido Generado ");
-						Tbc_LibroDiario.SelectedIndex = 2;
+		
+			
 						//lenar tabla
 						OdbcDataAdapter dt = Libro.llenarBalance(idLibro2);
 						DataTable table = new DataTable();
@@ -213,15 +218,6 @@ namespace CapaVistaCONTA
 							Dtg_Resumen.Rows.Add(row[0], row[1], row[2], row[3]);
 						}
 
-					}
-
-				}
-			}
-			
-
-
-
-			
 		}
 
 		private void Dtg_Partidas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -310,6 +306,26 @@ namespace CapaVistaCONTA
 		private void Timer1_Tick(object sender, EventArgs e)
 		{
 			progressBar1.Value = Libro.progreso;
+		}
+
+		private void Button3_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 0;
+		}
+
+		private void Button1_Click_1(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 1;
+		}
+
+		private void Button6_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 0;
+		}
+
+		private void Button5_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 2;
 		}
 	}
 }

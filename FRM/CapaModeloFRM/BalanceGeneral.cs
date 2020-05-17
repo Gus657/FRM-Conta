@@ -193,58 +193,58 @@ namespace CapaModeloCONTA
 
 			string query = "SELECT 'ACTIVO CORRIENTE', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles  WHERE id_balance_general = 1 AND '1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles  WHERE id_balance_general =" + idBalance + " AND '1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL ACTIVO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT 'TOTAL ACTIVO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general ="+idBalance+" AND '1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
 							"UNION ALL "+
 							"SELECT 'ACTIVO NO CORRIENTE', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = "+ idBalance + " AND '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL ACTIVO NO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable ) " +                                                      
+							"SELECT 'TOTAL ACTIVO NO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = "+ idBalance + " AND '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable ) " +                                                      
 							"UNION ALL "+
-							"SELECT 'TOTAL ACTIVO','','', ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"SELECT 'TOTAL ACTIVO','','', ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = "+ idBalance +" AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"UNION ALL "+
 							"SELECT 'PASIVO CORRIENTE', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
+							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL PASIVO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  ) " +                                                                                                                            
+							"SELECT 'TOTAL PASIVO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable  ) " +                                                                                                                            
 							"UNION ALL "+
 							"SELECT 'PASIVO NO CORRIENTE', '','','' "+
 							"UNION ALL "+
-							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable, saldo,'','' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL PASIVO NO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable ) " +
+							"SELECT 'TOTAL PASIVO NO CORRIENTE','', ROUND(SUM(saldo),2),'' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable ) " +
 							"UNION ALL "+
-							"SELECT 'TOTAL PASIVO','','',  ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"SELECT 'TOTAL PASIVO','','',  ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"UNION ALL "+ // CAPITAL
-							"SELECT cuenta_contable,'', saldo,'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) "+
+							"SELECT cuenta_contable,'', saldo,'' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
 							"SELECT 'GANANCIA DEL EJECICIO','', "+
 							"ROUND(("+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
 							"- "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
 							"- "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"),2) "+
-							",'' FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
+							",'' FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
 							"UNION ALL "+
 							"SELECT 'PASIVO + NUEVO CAPITAL','','', "+
 							"ROUND((( "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
 							"- "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
 							"- "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							") "+
 							"+ "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
 							"+ "+
-							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"),2 ) "+
-							"FROM balance_general_detalles   WHERE id_balance_general = 1 AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)";
+							"FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)";
 
 
 			OdbcDataAdapter dataTable = Mayor.LlenarTablaMayor(query);

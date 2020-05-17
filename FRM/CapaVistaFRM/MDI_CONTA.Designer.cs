@@ -38,12 +38,13 @@
 			this.libroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.libroMayorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.balanceGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.bALANCEGENERALToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.estadoDeResultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.bALANCEGENERALToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.seguridadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.Lbl_usuario = new System.Windows.Forms.Label();
+			this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -72,7 +73,8 @@
 			// 
 			this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tiposDeCuentasContablesToolStripMenuItem1,
-            this.cuentasContablesToolStripMenuItem1});
+            this.cuentasContablesToolStripMenuItem1,
+            this.empresasToolStripMenuItem});
 			this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
 			this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
 			this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -125,19 +127,19 @@
 			this.balanceGeneralToolStripMenuItem.Text = "5123 - Balance";
 			this.balanceGeneralToolStripMenuItem.Click += new System.EventHandler(this.BalanceGeneralToolStripMenuItem_Click);
 			// 
-			// bALANCEGENERALToolStripMenuItem1
-			// 
-			this.bALANCEGENERALToolStripMenuItem1.Name = "bALANCEGENERALToolStripMenuItem1";
-			this.bALANCEGENERALToolStripMenuItem1.Size = new System.Drawing.Size(278, 24);
-			this.bALANCEGENERALToolStripMenuItem1.Text = "5124 - Balance General";
-			this.bALANCEGENERALToolStripMenuItem1.Click += new System.EventHandler(this.BALANCEGENERALToolStripMenuItem1_Click);
-			// 
 			// estadoDeResultadosToolStripMenuItem
 			// 
 			this.estadoDeResultadosToolStripMenuItem.Name = "estadoDeResultadosToolStripMenuItem";
 			this.estadoDeResultadosToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
 			this.estadoDeResultadosToolStripMenuItem.Text = "5125 - Estado de Resultados";
 			this.estadoDeResultadosToolStripMenuItem.Click += new System.EventHandler(this.EstadoDeResultadosToolStripMenuItem_Click);
+			// 
+			// bALANCEGENERALToolStripMenuItem1
+			// 
+			this.bALANCEGENERALToolStripMenuItem1.Name = "bALANCEGENERALToolStripMenuItem1";
+			this.bALANCEGENERALToolStripMenuItem1.Size = new System.Drawing.Size(278, 24);
+			this.bALANCEGENERALToolStripMenuItem1.Text = "5124 - Balance General";
+			this.bALANCEGENERALToolStripMenuItem1.Click += new System.EventHandler(this.BALANCEGENERALToolStripMenuItem1_Click);
 			// 
 			// seguridadToolStripMenuItem
 			// 
@@ -172,6 +174,13 @@
 			this.Lbl_usuario.TabIndex = 2;
 			this.Lbl_usuario.Text = "Usuario";
 			this.Lbl_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// empresasToolStripMenuItem
+			// 
+			this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
+			this.empresasToolStripMenuItem.Size = new System.Drawing.Size(325, 24);
+			this.empresasToolStripMenuItem.Text = "5113 - Empresas";
+			this.empresasToolStripMenuItem.Click += new System.EventHandler(this.EmpresasToolStripMenuItem_Click);
 			// 
 			// MDI_CONTA
 			// 
@@ -215,5 +224,6 @@
 		private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem bALANCEGENERALToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem estadoDeResultadosToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem empresasToolStripMenuItem;
 	}
 }
