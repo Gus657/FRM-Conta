@@ -69,6 +69,9 @@ namespace CapaVistaCONTA
 		{
 			Cmb_Empresa_Crear.Items.AddRange(Libro.ComboDiario());
 			Cmb_Empresa_Modificar.Items.AddRange(Libro.ComboDiario());
+			Tbc_LibroDiario.Appearance = TabAppearance.FlatButtons;
+			Tbc_LibroDiario.ItemSize = new Size(0, 1);
+			Tbc_LibroDiario.SizeMode = TabSizeMode.Fixed;
 		}
 
 		private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -138,19 +141,25 @@ namespace CapaVistaCONTA
 
 		private void Btn_Partidas_Click(object sender, EventArgs e)
 		{
-			
-			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
-			Tbc_LibroDiario.SelectedIndex = 1;
-			OdbcDataAdapter dt = Libro.llenarPartidas(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString());
-			DataTable table = new DataTable();
-			dt.Fill(table);
-			Dtg_Partidas.Rows.Clear();
-			foreach (DataRow row in table.Rows)
+			if (Dtg_LibroDiario.Rows.Count != 0)
 			{
-				Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+				idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+				Tbc_LibroDiario.SelectedIndex = 1;
+				OdbcDataAdapter dt = Libro.llenarPartidas(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString());
+				DataTable table = new DataTable();
+				dt.Fill(table);
+				Dtg_Partidas.Rows.Clear();
+				foreach (DataRow row in table.Rows)
+				{
+					Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+				}
+
+				sn.insertarBitacora(user, "Vio las partidas", "Libro Diario");
 			}
-			 
-			sn.insertarBitacora(user, "Vio las partidas", "Libro Diario");
+			else
+			{
+				MessageBox.Show("No Hay Libros disponibles");
+			}
 
 		}
 
@@ -438,6 +447,26 @@ namespace CapaVistaCONTA
 				Dtg_Movimientos.CurrentCell.Value = "";
 			}
 			
+		}
+
+		private void Button3_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 0;
+		}
+
+		private void Button4_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 2;
+		}
+
+		private void Button6_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 0;
+		}
+
+		private void Button5_Click(object sender, EventArgs e)
+		{
+			Tbc_LibroDiario.SelectedIndex = 1;
 		}
 	}
 }
