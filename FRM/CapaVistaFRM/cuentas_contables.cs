@@ -87,6 +87,11 @@ namespace CapaVistaCONTA {
 
 		private void Btn_guardar_Click(object sender, EventArgs e)
 		{
+			if (Txt_Id.Text == "" || Txt_desc.Text == "" || Txt_nombre.Text == "" || Cmb_Tipo.Text == "")
+			{
+				MessageBox.Show("Por favor rellene todos los campos!");
+			}
+			else { 
 			checkBox1.Visible = false;
 			button1.Visible = false;
 			if (estadoBtn == 0)
@@ -102,7 +107,7 @@ namespace CapaVistaCONTA {
 			}
 			else
 			{
-				mod.ModCuenta(Txt_Id.Text,Txt_nombre.Text, Txt_desc.Text, (checkBox1.Checked) ? "1" : "0");
+				mod.ModCuenta(Txt_Id.Text, Txt_nombre.Text, Txt_desc.Text, (checkBox1.Checked) ? "1" : "0");
 				llenarCuentas();
 				Txt_Id.Text = "";
 				Txt_desc.Text = "";
@@ -110,7 +115,7 @@ namespace CapaVistaCONTA {
 				Txt_Id.Enabled = false;
 			}
 			estadoBtn = 0;
-
+		}
 
 
 		}
@@ -168,6 +173,11 @@ namespace CapaVistaCONTA {
 		private void Dtgv_Cuentas_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
 		{
 			
+		}
+
+		private void PictureBox2_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\MantenimientoCuentasContables.chm");
 		}
 	}
 }

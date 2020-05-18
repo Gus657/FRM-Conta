@@ -47,6 +47,7 @@ namespace CapaVistaCONTA
         private void BalanceGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			balances bal = new balances(Lbl_usuario.Text);
+			bal.MdiParent = this;
 			bal.Show();
         }
 
@@ -173,6 +174,7 @@ namespace CapaVistaCONTA
 		private void LibroMayorToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			libro_Mayor nuevo = new libro_Mayor(usuarioActivo);
+			nuevo.MdiParent = this;
 			nuevo.Show();
 		}
 
@@ -208,19 +210,29 @@ namespace CapaVistaCONTA
 		private void BALANCEGENERALToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			balance_general bal = new balance_general(Lbl_usuario.Text);
+			bal.MdiParent = this;
 			bal.Show();
 		}
 
 		private void EstadoDeResultadosToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			estado_de_resultados bal = new estado_de_resultados(Lbl_usuario.Text);
+			bal.MdiParent = this;
 			bal.Show();
 		}
 
 		private void EmpresasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			mantenimiento_empresas mantenimiento = new mantenimiento_empresas(Lbl_usuario.Text);
+			mantenimiento.MdiParent = this;
 			mantenimiento.Show();
+		}
+
+		private void TipoDePólizaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			mantenimiento_tipo_poliza pol = new mantenimiento_tipo_poliza(Lbl_usuario.Text);
+			pol.MdiParent = this;
+			pol.Show();
 		}
 	}
 }

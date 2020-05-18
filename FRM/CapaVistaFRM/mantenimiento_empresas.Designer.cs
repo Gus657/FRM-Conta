@@ -31,6 +31,8 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mantenimiento_empresas));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.navegador1 = new CapaDeDiseno.Navegador();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -51,11 +53,24 @@
 			this.navegador1.TabIndex = 2;
 			this.navegador1.Load += new System.EventHandler(this.Navegador1_Load_1);
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox1.BackgroundImage = global::CapaVistaFRM.Properties.Resources.ayudaNegro;
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox1.Location = new System.Drawing.Point(700, 128);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(51, 44);
+			this.pictureBox1.TabIndex = 3;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+			// 
 			// mantenimiento_empresas
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(840, 721);
+			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.navegador1);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,8 +79,9 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "mantenimiento_empresas";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "5111 - Tipos de Cuentas contables";
+			this.Text = "5113 - Empresas";
 			this.Load += new System.EventHandler(this.mantenimiento_empresas_Load);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -75,5 +91,6 @@
        
         private System.Windows.Forms.Panel panel1;
 		private CapaDeDiseno.Navegador navegador1;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }

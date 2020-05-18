@@ -95,6 +95,12 @@
     <Compile Include="libro_Mayor.Designer.cs">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
     </Compile>
+    <Compile Include="mantenimiento_tipo_poliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_tipo_poliza.Designer.cs">
+      <DependentUpon>mantenimiento_tipo_poliza.cs</DependentUpon>
+    </Compile>
     <Compile Include="mantenimiento_empresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="libro_Mayor.resx">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_tipo_poliza.resx">
+      <DependentUpon>mantenimiento_tipo_poliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento_empresas.resx">
       <DependentUpon>mantenimiento_empresas.cs</DependentUpon>
@@ -232,6 +241,8 @@
     <None Include="Resources\money.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ayuda.png" />
+    <None Include="Resources\ayudaNegro.png" />
     <Content Include="Resources\pdf.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

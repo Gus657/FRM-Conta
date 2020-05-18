@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CapaVistaCONTA
 {
-    public partial class mantenimiento_tipos_cuentas_contables : Form
+    public partial class mantenimiento_tipo_poliza : Form
     {
         string usuario = "";        
-        public mantenimiento_tipos_cuentas_contables(string usuarioActivo)
+        public mantenimiento_tipo_poliza(string usuarioActivo)
         {
             InitializeComponent();
             usuario = usuarioActivo;
-            string[] alias = { "Codigo", "Nombre", "Descripción", "Estado" }; // Arreglo de nombres para campos
+            string[] alias = { "Codigo", "Nombre", "Desccripción", "Estado" }; // Arreglo de nombres para campos
 			navegador1.asignarAlias(alias); // Asignar nombres
 			navegador1.asignarSalida(this); // Asignar form de salida
 			Color nuevoColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF"); // Deficion de 
@@ -26,8 +26,8 @@ namespace CapaVistaCONTA
 			navegador1.asignarAyuda("1"); // asignar 1 por defecto 
 										  // LOS COMBOS SE ASIGNAN SEGUN EL ORDEN EN QUE SE DECLAREN
 										  //navegador1.asignarComboConTabla("tabla", "campo", 0); // 0 o 1 en modo, 0 pone el id y 1 coloca el nombre y consulta el id
-			navegador1.asignarTabla("tipo_cuentas"); // tabla principal
-			navegador1.asignarNombreForm("Tipos de Cuentas Contables"); // Titulo y nombre del form
+			navegador1.asignarTabla("tipo_polizas"); // tabla principal
+			navegador1.asignarNombreForm("Tipos de Poliza"); // Titulo y nombre del form
 		}
 
         private void Navegador1_Load(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace CapaVistaCONTA
             
 		}
 
-		private void Mantenimiento_tipos_cuentas_contables_Load(object sender, EventArgs e)
+		private void mantenimiento_tipo_poliza_Load(object sender, EventArgs e)
 		{
 
 		}
@@ -50,7 +50,7 @@ namespace CapaVistaCONTA
 
 		private void PictureBox1_Click(object sender, EventArgs e)
 		{
-			System.Diagnostics.Process.Start(@"Ayudas\MantenimientoTipoCuentasContables.chm");
+			System.Diagnostics.Process.Start(@"Ayudas\MantenimientoTipoPoliza.chm");
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace CapaVistaCONTA
 {
-    partial class mantenimiento_tipos_cuentas_contables
+    partial class mantenimiento_tipo_poliza
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mantenimiento_tipos_cuentas_contables));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mantenimiento_tipo_poliza));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.navegador1 = new CapaDeDiseno.Navegador();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,14 +58,14 @@
 			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
 			this.pictureBox1.BackgroundImage = global::CapaVistaFRM.Properties.Resources.ayudaNegro;
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox1.Location = new System.Drawing.Point(699, 128);
+			this.pictureBox1.Location = new System.Drawing.Point(700, 128);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(51, 44);
 			this.pictureBox1.TabIndex = 4;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
 			// 
-			// mantenimiento_tipos_cuentas_contables
+			// mantenimiento_tipo_poliza
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
@@ -77,10 +77,10 @@
 			this.ForeColor = System.Drawing.Color.Black;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "mantenimiento_tipos_cuentas_contables";
+			this.Name = "mantenimiento_tipo_poliza";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "5111 - Tipos de Cuentas contables";
-			this.Load += new System.EventHandler(this.Mantenimiento_tipos_cuentas_contables_Load);
+			this.Text = "5114 - Tipos de Pólizas";
+			this.Load += new System.EventHandler(this.mantenimiento_tipo_poliza_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
