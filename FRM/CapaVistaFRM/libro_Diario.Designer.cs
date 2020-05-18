@@ -58,6 +58,8 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.button4 = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Btn_Guardar_partia = new System.Windows.Forms.Button();
 			this.Dtg_Movimientos = new System.Windows.Forms.DataGridView();
@@ -75,6 +77,8 @@
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button6 = new System.Windows.Forms.Button();
 			this.Dtg_Resumen = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,10 +88,7 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.Tbc_LibroDiario.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_LibroDiario)).BeginInit();
@@ -100,6 +101,7 @@
 			this.tabPage3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Resumen)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// Tbc_LibroDiario
@@ -348,13 +350,43 @@
 			this.tabPage2.Controls.Add(this.Dtg_Movimientos);
 			this.tabPage2.Controls.Add(this.Gpb_Partida);
 			this.tabPage2.Controls.Add(this.Dtg_Partidas);
-			this.tabPage2.Location = new System.Drawing.Point(4, 30);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1270, 529);
+			this.tabPage2.Size = new System.Drawing.Size(1270, 537);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Partidas";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.Firebrick;
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.ForeColor = System.Drawing.Color.White;
+			this.button4.Location = new System.Drawing.Point(749, 486);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(119, 35);
+			this.button4.TabIndex = 14;
+			this.button4.Text = "Visualizar";
+			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.Button4_Click);
+			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.Firebrick;
+			this.button3.FlatAppearance.BorderSize = 0;
+			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.ForeColor = System.Drawing.Color.White;
+			this.button3.Location = new System.Drawing.Point(624, 486);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(119, 35);
+			this.button3.TabIndex = 13;
+			this.button3.Text = "Inicio";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
 			// button1
 			// 
@@ -561,13 +593,43 @@
 			this.tabPage3.Controls.Add(this.button6);
 			this.tabPage3.Controls.Add(this.Dtg_Resumen);
 			this.tabPage3.Controls.Add(this.button2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 30);
+			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(1270, 529);
+			this.tabPage3.Size = new System.Drawing.Size(1270, 537);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Visualizar";
 			this.tabPage3.UseVisualStyleBackColor = true;
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.Firebrick;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.ForeColor = System.Drawing.Color.White;
+			this.button5.Location = new System.Drawing.Point(1168, 465);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(96, 35);
+			this.button5.TabIndex = 21;
+			this.button5.Text = "Partidas";
+			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.Button5_Click);
+			// 
+			// button6
+			// 
+			this.button6.BackColor = System.Drawing.Color.Firebrick;
+			this.button6.FlatAppearance.BorderSize = 0;
+			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.ForeColor = System.Drawing.Color.White;
+			this.button6.Location = new System.Drawing.Point(1067, 465);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(95, 35);
+			this.button6.TabIndex = 20;
+			this.button6.Text = "Inicio";
+			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.Button6_Click);
 			// 
 			// Dtg_Resumen
 			// 
@@ -663,6 +725,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.Firebrick;
+			this.panel1.Controls.Add(this.pictureBox2);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.ForeColor = System.Drawing.Color.Black;
 			this.panel1.Location = new System.Drawing.Point(2, 2);
@@ -682,65 +745,17 @@
 			this.label1.Text = "Libro Diario";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// button3
+			// pictureBox2
 			// 
-			this.button3.BackColor = System.Drawing.Color.Firebrick;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.ForeColor = System.Drawing.Color.White;
-			this.button3.Location = new System.Drawing.Point(624, 486);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(119, 35);
-			this.button3.TabIndex = 13;
-			this.button3.Text = "Inicio";
-			this.button3.UseVisualStyleBackColor = false;
-			this.button3.Click += new System.EventHandler(this.Button3_Click);
-			// 
-			// button4
-			// 
-			this.button4.BackColor = System.Drawing.Color.Firebrick;
-			this.button4.FlatAppearance.BorderSize = 0;
-			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.ForeColor = System.Drawing.Color.White;
-			this.button4.Location = new System.Drawing.Point(749, 486);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(119, 35);
-			this.button4.TabIndex = 14;
-			this.button4.Text = "Visualizar";
-			this.button4.UseVisualStyleBackColor = false;
-			this.button4.Click += new System.EventHandler(this.Button4_Click);
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.Firebrick;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.ForeColor = System.Drawing.Color.White;
-			this.button5.Location = new System.Drawing.Point(1168, 465);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(96, 35);
-			this.button5.TabIndex = 21;
-			this.button5.Text = "Partidas";
-			this.button5.UseVisualStyleBackColor = false;
-			this.button5.Click += new System.EventHandler(this.Button5_Click);
-			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.Firebrick;
-			this.button6.FlatAppearance.BorderSize = 0;
-			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(1067, 465);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(95, 35);
-			this.button6.TabIndex = 20;
-			this.button6.Text = "Inicio";
-			this.button6.UseVisualStyleBackColor = false;
-			this.button6.Click += new System.EventHandler(this.Button6_Click);
+			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox2.BackgroundImage = global::CapaVistaFRM.Properties.Resources.ayuda;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox2.Location = new System.Drawing.Point(1214, 10);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(51, 44);
+			this.pictureBox2.TabIndex = 13;
+			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
 			// 
 			// libro_Diario
 			// 
@@ -771,6 +786,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Resumen)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -828,5 +844,6 @@
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.PictureBox pictureBox2;
 	}
 }

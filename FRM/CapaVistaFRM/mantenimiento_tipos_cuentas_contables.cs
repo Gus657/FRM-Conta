@@ -47,5 +47,10 @@ namespace CapaVistaCONTA
 			navegador1.botonesYPermisosInicial(usuario, aplicacionActiva); // Consulta permisos al iniciar
 			navegador1.ObtenerIdAplicacion(aplicacionActiva);// Pasa el id de la aplicacion actual
 		}
+
+		private void PictureBox1_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\MantenimientoTipoCuentasContables.chm");
+		}
 	}
 }

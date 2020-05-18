@@ -139,7 +139,7 @@ namespace CapaVistaCONTA
 				}
 				else
 				{
-					MessageBox.Show("Llendo a Visualizaar!");
+				
 					Tbc_LibroDiario.SelectedIndex = 2;
 				}
 
@@ -334,6 +334,11 @@ namespace CapaVistaCONTA
 		private void Button1_Click_2(object sender, EventArgs e)
 		{
 			Tbc_LibroDiario.SelectedIndex = 1;
+		}
+
+		private void PictureBox2_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\ProcesoMayor.chm");
 		}
 	}
 }

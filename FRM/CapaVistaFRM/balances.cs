@@ -322,5 +322,10 @@ namespace CapaVistaCONTA
 		{
 			Tbc_LibroDiario.SelectedIndex = 1;
 		}
+
+		private void PictureBox2_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\ProcesoBalances.chm");
+		}
 	}
 }

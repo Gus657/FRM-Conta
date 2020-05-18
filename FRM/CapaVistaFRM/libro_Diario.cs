@@ -231,6 +231,7 @@ namespace CapaVistaCONTA
 				{
 					Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
 				}
+				Txt_Concepto.Text = "";
 				sn.insertarBitacora(user, "Creo una partida", "Libro Diario");
 			}
 		}
@@ -467,6 +468,11 @@ namespace CapaVistaCONTA
 		private void Button5_Click(object sender, EventArgs e)
 		{
 			Tbc_LibroDiario.SelectedIndex = 1;
+		}
+
+		private void PictureBox2_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\ProcesoDiario.chm");
 		}
 	}
 }
