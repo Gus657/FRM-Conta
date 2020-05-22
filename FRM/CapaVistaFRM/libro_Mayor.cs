@@ -175,7 +175,16 @@ namespace CapaVistaCONTA
 				{
 					Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3]);
 				}
-				
+				foreach (DataGridViewRow row in Dtg_Partidas.Rows)
+				{
+					if (row.Cells[0].Value.ToString() == "" && row.Cells[1].Value.ToString() == "" && row.Cells[2].Value.ToString() != "" && row.Cells[3].Value.ToString() == "")
+					{
+						row.DefaultCellStyle.BackColor = Color.Firebrick;
+						row.DefaultCellStyle.ForeColor = Color.White;
+
+					}
+				}
+
 			}
 			else
 			{
@@ -189,7 +198,16 @@ namespace CapaVistaCONTA
 				{
 					Dtg_Resumen.Rows.Add(row[0], row[1], row[2], row[3]);
 				}
-				
+
+				foreach (DataGridViewRow row in Dtg_Resumen.Rows)
+				{
+					if (row.Cells[0].Value.ToString() == "" && row.Cells[1].Value.ToString() == "" && row.Cells[2].Value.ToString() != "" && row.Cells[3].Value.ToString() == "")
+					{
+						row.DefaultCellStyle.BackColor = Color.Firebrick;
+						row.DefaultCellStyle.ForeColor = Color.White;
+
+					}
+				}
 
 			}
 			
@@ -204,7 +222,11 @@ namespace CapaVistaCONTA
 		private void Tbc_LibroDiario_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			
-				OdbcDataAdapter dt = Libro.llenarMayor(Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString(), Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString());
+			idLibro = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
+			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
+			if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()) != "0")
+			{
+				OdbcDataAdapter dt = Libro.llenarMayor(idLibro2, idLibro);
 				DataTable table = new DataTable();
 				dt.Fill(table);
 				Dtg_Resumen.Rows.Clear();
@@ -212,11 +234,22 @@ namespace CapaVistaCONTA
 				{
 					Dtg_Resumen.Rows.Add(row[0], row[1], row[2], row[3]);
 				}
+				foreach (DataGridViewRow row in Dtg_Resumen.Rows)
+				{
+					if (row.Cells[0].Value.ToString() == "" && row.Cells[1].Value.ToString() == "" && row.Cells[2].Value.ToString() != "" && row.Cells[3].Value.ToString() == "")
+					{
+						row.DefaultCellStyle.BackColor = Color.Firebrick;
+						row.DefaultCellStyle.ForeColor = Color.White;
+
+					}
+				}
+			}
 			
-			
-			
-				
-			
+
+
+
+
+
 
 
 
