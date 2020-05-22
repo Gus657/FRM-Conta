@@ -527,5 +527,41 @@ namespace CapaVistaCONTA
 		{
 			System.Diagnostics.Process.Start(@"Ayudas\ProcesoDiario.chm");
 		}
+
+		private void Dtg_Movimientos_MouseEnter(object sender, EventArgs e)
+		{
+			decimal debe = 0;
+			decimal haber = 0;
+			decimal dif = 0;
+			for (int i = 0; i < Dtg_Movimientos.Rows.Count - 1; i++)
+			{
+				debe += Convert.ToDecimal(Dtg_Movimientos.Rows[i].Cells[1].Value);
+				haber += Convert.ToDecimal(Dtg_Movimientos.Rows[i].Cells[2].Value);
+			}
+			dif = debe - haber;
+			if (dif<0)
+			{
+				dif = dif * -1;
+			}
+			label10.Text = dif.ToString();
+		}
+
+		private void Dtg_Movimientos_MouseMove(object sender, MouseEventArgs e)
+		{
+			decimal debe = 0;
+			decimal haber = 0;
+			decimal dif = 0;
+			for (int i = 0; i < Dtg_Movimientos.Rows.Count - 1; i++)
+			{
+				debe += Convert.ToDecimal(Dtg_Movimientos.Rows[i].Cells[1].Value);
+				haber += Convert.ToDecimal(Dtg_Movimientos.Rows[i].Cells[2].Value);
+			}
+			dif = debe - haber;
+			if (dif < 0)
+			{
+				dif = dif * -1;
+			}
+			label10.Text = dif.ToString();
+		}
 	}
 }
