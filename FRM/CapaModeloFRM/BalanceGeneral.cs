@@ -244,6 +244,23 @@ namespace CapaModeloCONTA
 							"+ "+
 							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
 							"),2 ) "+
+							"FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) " +
+							"UNION ALL " +
+							"SELECT 'SUMAS IGUALES','',("+
+							"SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"), " +
+							"ROUND((( " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('1.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '1.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"- " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"- " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							") " +
+							"+ " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND('2.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable) OR '2.2' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable))) " +
+							"+ " +
+							"(SELECT ROUND(SUM(saldo),2) FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)) " +
+							"),2 ) " +
 							"FROM balance_general_detalles   WHERE id_balance_general = " + idBalance + " AND '3.1' = (SELECT id_tipo_cuenta from cuentas WHERE nombre = cuenta_contable)";
 
 

@@ -87,8 +87,10 @@
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
 			this.Tbc_LibroDiario.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_LibroDiario)).BeginInit();
@@ -343,6 +345,8 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.label10);
+			this.tabPage2.Controls.Add(this.label9);
 			this.tabPage2.Controls.Add(this.button4);
 			this.tabPage2.Controls.Add(this.button3);
 			this.tabPage2.Controls.Add(this.button1);
@@ -350,10 +354,10 @@
 			this.tabPage2.Controls.Add(this.Dtg_Movimientos);
 			this.tabPage2.Controls.Add(this.Gpb_Partida);
 			this.tabPage2.Controls.Add(this.Dtg_Partidas);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Location = new System.Drawing.Point(4, 30);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1270, 537);
+			this.tabPage2.Size = new System.Drawing.Size(1270, 529);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Partidas";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -410,7 +414,7 @@
 			this.Btn_Guardar_partia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
 			this.Btn_Guardar_partia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Btn_Guardar_partia.ForeColor = System.Drawing.Color.White;
-			this.Btn_Guardar_partia.Location = new System.Drawing.Point(224, 486);
+			this.Btn_Guardar_partia.Location = new System.Drawing.Point(14, 486);
 			this.Btn_Guardar_partia.Name = "Btn_Guardar_partia";
 			this.Btn_Guardar_partia.Size = new System.Drawing.Size(119, 35);
 			this.Btn_Guardar_partia.TabIndex = 4;
@@ -446,6 +450,8 @@
 			this.Dtg_Movimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Movimientos_CellEndEdit);
 			this.Dtg_Movimientos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Movimientos_CellValueChanged);
 			this.Dtg_Movimientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dtg_Movimientos_KeyPress);
+			this.Dtg_Movimientos.MouseEnter += new System.EventHandler(this.Dtg_Movimientos_MouseEnter);
+			this.Dtg_Movimientos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dtg_Movimientos_MouseMove);
 			// 
 			// Gpb_Partida
 			// 
@@ -733,6 +739,18 @@
 			this.panel1.Size = new System.Drawing.Size(1278, 102);
 			this.panel1.TabIndex = 1;
 			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox2.BackgroundImage = global::CapaVistaFRM.Properties.Resources.ayuda;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox2.Location = new System.Drawing.Point(1214, 10);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(51, 44);
+			this.pictureBox2.TabIndex = 13;
+			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -745,17 +763,25 @@
 			this.label1.Text = "Libro Diario";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// pictureBox2
+			// label9
 			// 
-			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox2.BackgroundImage = global::CapaVistaFRM.Properties.Resources.ayuda;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox2.Location = new System.Drawing.Point(1214, 10);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(51, 44);
-			this.pictureBox2.TabIndex = 13;
-			this.pictureBox2.TabStop = false;
-			this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(238, 494);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(199, 19);
+			this.label9.TabIndex = 15;
+			this.label9.Text = "Diferencia Debe y Haber";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(474, 494);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(40, 19);
+			this.label10.TabIndex = 16;
+			this.label10.Text = "0.00";
 			// 
 			// libro_Diario
 			// 
@@ -778,6 +804,7 @@
 			this.Gpb_Crear.ResumeLayout(false);
 			this.Gpb_Crear.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
+			this.tabPage2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Dtg_Movimientos)).EndInit();
 			this.Gpb_Partida.ResumeLayout(false);
 			this.Gpb_Partida.PerformLayout();
@@ -845,5 +872,7 @@
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
 	}
 }

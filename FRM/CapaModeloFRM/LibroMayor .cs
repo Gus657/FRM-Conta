@@ -142,7 +142,7 @@ namespace CapaModeloCONTA
 				}
 				//MessageBox.Show("SALIO DE CUENTAS");
 			}
-
+			progreso = 100;
 			return "Libro Mayor Generado Correctamente";
 		}
 
