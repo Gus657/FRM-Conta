@@ -151,7 +151,17 @@ namespace CapaVistaCONTA
 				Dtg_Partidas.Rows.Clear();
 				foreach (DataRow row in table.Rows)
 				{
+					
 					Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+				}
+				foreach (DataGridViewRow row in Dtg_Partidas.Rows)
+				{
+					if (row.Cells[0].Value.ToString() != "")
+					{
+						row.DefaultCellStyle.BackColor = Color.Firebrick;
+						row.DefaultCellStyle.ForeColor = Color.White;
+
+					}
 				}
 
 				sn.insertarBitacora(user, "Vio las partidas", "Libro Diario");
@@ -231,6 +241,15 @@ namespace CapaVistaCONTA
 				{
 					Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
 				}
+				foreach (DataGridViewRow row in Dtg_Partidas.Rows)
+				{
+					if (row.Cells[0].Value.ToString() != "")
+					{
+						row.DefaultCellStyle.BackColor = Color.Firebrick;
+						row.DefaultCellStyle.ForeColor = Color.White;
+
+					}
+				}
 				Txt_Concepto.Text = "";
 				sn.insertarBitacora(user, "Creo una partida", "Libro Diario");
 			}
@@ -254,12 +273,29 @@ namespace CapaVistaCONTA
 			{
 				Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
 			}
+			foreach (DataGridViewRow row in Dtg_Partidas.Rows)
+			{
+				if (row.Cells[0].Value.ToString() != "")
+				{
+					row.DefaultCellStyle.BackColor = Color.Firebrick;
+					row.DefaultCellStyle.ForeColor = Color.White;
 
-			
+				}
+			}
+
 			Dtg_Resumen.Rows.Clear();
 			foreach (DataRow row in table.Rows)
 			{
 				Dtg_Resumen.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+			}
+			foreach (DataGridViewRow row in Dtg_Resumen.Rows)
+			{
+				if (row.Cells[0].Value.ToString() != "")
+				{
+					row.DefaultCellStyle.BackColor = Color.Firebrick;
+					row.DefaultCellStyle.ForeColor = Color.White;
+
+				}
 			}
 		}
 
@@ -292,12 +328,29 @@ namespace CapaVistaCONTA
 					{
 						Dtg_Partidas.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
 					}
+					foreach (DataGridViewRow row in Dtg_Partidas.Rows)
+					{
+						if (row.Cells[0].Value.ToString() != "")
+						{
+							row.DefaultCellStyle.BackColor = Color.Firebrick;
+							row.DefaultCellStyle.ForeColor = Color.White;
 
+						}
+					}
 
 					Dtg_Resumen.Rows.Clear();
 					foreach (DataRow row in table.Rows)
 					{
 						Dtg_Resumen.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+					}
+					foreach (DataGridViewRow row in Dtg_Resumen.Rows)
+					{
+						if (row.Cells[0].Value.ToString() != "")
+						{
+							row.DefaultCellStyle.BackColor = Color.Firebrick;
+							row.DefaultCellStyle.ForeColor = Color.White;
+
+						}
 					}
 					sn.insertarBitacora(user, "Elimino una partida", "Libro Diario");
 				}
