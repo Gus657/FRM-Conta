@@ -234,5 +234,11 @@ namespace CapaVistaCONTA
 			pol.MdiParent = this;
 			pol.Show();
 		}
+
+		private void NomenclaturaContalbleToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			reporteCuentas rep = new reporteCuentas(Lbl_usuario.Text);
+			rep.Show();
+		}
 	}
 }

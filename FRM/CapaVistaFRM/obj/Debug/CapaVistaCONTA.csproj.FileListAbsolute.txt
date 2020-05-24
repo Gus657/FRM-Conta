@@ -99,3 +99,6 @@ C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVist
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.estado_de_resultados.resources
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.mantenimiento_empresas.resources
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.mantenimiento_tipo_poliza.resources
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.reporteCuentas.resources
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CrystalDecisions.Windows.Forms.dll

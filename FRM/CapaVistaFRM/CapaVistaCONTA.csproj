@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DLLS\Seguridad\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
@@ -48,14 +49,18 @@
     <Reference Include="CapaDiseno">
       <HintPath>..\..\DLLS\Seguridad\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="itextsharp">
       <HintPath>..\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CuentasContables.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasContables.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="estado-de-resultados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +106,17 @@
     <Compile Include="libro_Mayor.Designer.cs">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
     </Compile>
-    <Compile Include="mantenimiento_tipo_poliza.cs">
+    <Compile Include="mantenimiento_tipo_poliza - Copia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mantenimiento_tipo_poliza.Designer.cs">
-      <DependentUpon>mantenimiento_tipo_poliza.cs</DependentUpon>
+    <Compile Include="mantenimiento_tipo_poliza - Copia.Designer.cs">
+      <DependentUpon>mantenimiento_tipo_poliza - Copia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporteCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporteCuentas.Designer.cs">
+      <DependentUpon>reporteCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento_empresas.cs">
       <SubType>Form</SubType>
@@ -143,6 +160,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CuentasContables.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CuentasContables.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="estado-de-resultados.resx">
       <DependentUpon>estado-de-resultados.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,8 +179,11 @@
     <EmbeddedResource Include="libro_Mayor.resx">
       <DependentUpon>libro_Mayor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mantenimiento_tipo_poliza.resx">
-      <DependentUpon>mantenimiento_tipo_poliza.cs</DependentUpon>
+    <EmbeddedResource Include="mantenimiento_tipo_poliza - Copia.resx">
+      <DependentUpon>mantenimiento_tipo_poliza - Copia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteCuentas.resx">
+      <DependentUpon>reporteCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento_empresas.resx">
       <DependentUpon>mantenimiento_empresas.cs</DependentUpon>
@@ -243,7 +267,11 @@
   <ItemGroup>
     <None Include="Resources\ayuda.png" />
     <None Include="Resources\ayudaNegro.png" />
+    <None Include="Resources\FONDO.png" />
     <Content Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

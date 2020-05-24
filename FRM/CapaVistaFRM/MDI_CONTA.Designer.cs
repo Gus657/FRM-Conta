@@ -44,6 +44,8 @@
 			this.bALANCEGENERALToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.seguridadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.nomenclaturaContalbleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.Lbl_usuario = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
@@ -57,6 +59,7 @@
             this.mantenimientosToolStripMenuItem,
             this.contabilidadToolStripMenuItem,
             this.seguridadToolStripMenuItem,
+            this.reportesToolStripMenuItem,
             this.ayudaToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -173,6 +176,21 @@
 			this.seguridadToolStripMenuItem1.Text = "Seguridad";
 			this.seguridadToolStripMenuItem1.Click += new System.EventHandler(this.SeguridadToolStripMenuItem1_Click);
 			// 
+			// reportesToolStripMenuItem
+			// 
+			this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nomenclaturaContalbleToolStripMenuItem});
+			this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+			this.reportesToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+			this.reportesToolStripMenuItem.Text = "Reportes";
+			// 
+			// nomenclaturaContalbleToolStripMenuItem
+			// 
+			this.nomenclaturaContalbleToolStripMenuItem.Name = "nomenclaturaContalbleToolStripMenuItem";
+			this.nomenclaturaContalbleToolStripMenuItem.Size = new System.Drawing.Size(259, 24);
+			this.nomenclaturaContalbleToolStripMenuItem.Text = "Nomenclatura Contalble";
+			this.nomenclaturaContalbleToolStripMenuItem.Click += new System.EventHandler(this.NomenclaturaContalbleToolStripMenuItem_Click);
+			// 
 			// ayudaToolStripMenuItem
 			// 
 			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
@@ -195,7 +213,7 @@
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
-			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackgroundImage = global::CapaVistaFRM.Properties.Resources.FONDO;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.Lbl_usuario);
@@ -235,5 +253,7 @@
 		private System.Windows.Forms.ToolStripMenuItem estadoDeResultadosToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem empresasToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem tipoDePólizaToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem nomenclaturaContalbleToolStripMenuItem;
 	}
 }

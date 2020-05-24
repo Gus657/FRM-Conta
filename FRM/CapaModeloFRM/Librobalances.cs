@@ -161,12 +161,12 @@ namespace CapaModeloCONTA
 						}
 				InsertarDetalleBalance(noDetalle.ToString(), idBalance, valores[noDetalle-1].ToString(), debe.ToString(), haber.ToString(), deudor.ToString(), acreedor.ToString());
 			}
-			
-				
-			
-				
-			
 
+
+
+
+
+			progreso = 100;
 			return "Balances Generados Correctamente";
 		}
 
