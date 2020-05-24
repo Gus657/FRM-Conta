@@ -7,3 +7,12 @@ C:\Users\allan\Desktop\Seguridad\CapaLogica\obj\Debug\CapaLogica.csproj.CoreComp
 C:\Users\allan\Desktop\Seguridad\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\allan\Desktop\Seguridad\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\allan\Desktop\Seguridad\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\DLLS\Seguridad\CapaLogica\obj\Debug\CapaLogica.pdb

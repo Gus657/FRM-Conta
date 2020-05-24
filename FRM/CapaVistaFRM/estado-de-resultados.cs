@@ -152,7 +152,8 @@ namespace CapaVistaCONTA
 
 		private void Btn_Guardar_partia_Click(object sender, EventArgs e)
 		{
-
+			idLibro = Dtg_LibroDiario.CurrentRow.Cells[1].Value.ToString();
+			idLibro2 = Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString();
 			if (Libro.ConsultarMayor(Dtg_LibroDiario.CurrentRow.Cells[0].Value.ToString()) == "0")
 			{
 				progressBar1.Visible = true;
