@@ -222,6 +222,7 @@ namespace CapaVistaCONTA
 		}
 
 		private void EmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+
 		{
 			mantenimiento_empresas mantenimiento = new mantenimiento_empresas(Lbl_usuario.Text);
 			mantenimiento.MdiParent = this;
@@ -239,6 +240,21 @@ namespace CapaVistaCONTA
 		{
 			reporteCuentas rep = new reporteCuentas(Lbl_usuario.Text);
 			rep.Show();
+		}
+
+		private void PolizaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void EjemploToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start(@"Ayudas\FRM.chm");
 		}
 	}
 }
