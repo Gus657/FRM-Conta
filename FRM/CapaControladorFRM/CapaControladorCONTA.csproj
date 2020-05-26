@@ -47,6 +47,7 @@
     <Compile Include="sql-EstadoDeResultados.cs" />
     <Compile Include="sql-BalanceGeneral.cs" />
     <Compile Include="sql-cuentas-Contables.cs" />
+    <Compile Include="sql_PolizasDetalles.cs" />
     <Compile Include="sql-LibroDiario.cs" />
     <Compile Include="sql-libroMayor - Copia.cs" />
     <Compile Include="sql-balances.cs" />

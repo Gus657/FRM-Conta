@@ -256,5 +256,13 @@ namespace CapaVistaCONTA
 		{
 			System.Diagnostics.Process.Start(@"Ayudas\FRM.chm");
 		}
+
+		private void ActualizarPólizasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			actualizarPolizas poli = new actualizarPolizas(Lbl_usuario.Text);
+			poli.Show();
+			poli.MdiParent = this;
+
+		}
 	}
 }

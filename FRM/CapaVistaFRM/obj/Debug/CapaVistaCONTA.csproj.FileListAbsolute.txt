@@ -104,3 +104,4 @@ C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CrystalD
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\Polizas.dll
 C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\bin\Debug\Polizas.pdb
+C:\Users\gganp\Desktop\ERP-RUP\FRM\FRM-Conta\FRM\CapaVistaFRM\obj\Debug\CapaVistaCONTA.actualizarPolizas.resources
