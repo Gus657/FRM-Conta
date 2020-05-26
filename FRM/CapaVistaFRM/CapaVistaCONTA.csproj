@@ -104,6 +104,12 @@
     <Compile Include="balances.Designer.cs">
       <DependentUpon>balances.cs</DependentUpon>
     </Compile>
+    <Compile Include="actualizarPolizas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarPolizas.Designer.cs">
+      <DependentUpon>actualizarPolizas.cs</DependentUpon>
+    </Compile>
     <Compile Include="libro_Mayor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="balances.resx">
       <DependentUpon>balances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarPolizas.resx">
+      <DependentUpon>actualizarPolizas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="libro_Mayor.resx">
       <DependentUpon>libro_Mayor.cs</DependentUpon>

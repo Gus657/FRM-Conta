@@ -45,6 +45,7 @@
     <Compile Include="EstadoDeResultados.cs" />
     <Compile Include="CuentasContables.cs" />
     <Compile Include="BalanceGeneral.cs" />
+    <Compile Include="PolizasDetalles.cs" />
     <Compile Include="LibroDiario.cs" />
     <Compile Include="LibroMayor .cs" />
     <Compile Include="LibroBalances.cs" />

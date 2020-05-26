@@ -48,6 +48,7 @@
 			this.nomenclaturaContalbleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.Lbl_usuario = new System.Windows.Forms.Label();
+			this.actualizarPólizasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -115,6 +116,7 @@
 			// contabilidadToolStripMenuItem
 			// 
 			this.contabilidadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizarPólizasToolStripMenuItem,
             this.libroDiarioToolStripMenuItem,
             this.libroMayorToolStripMenuItem,
             this.balanceGeneralToolStripMenuItem,
@@ -210,6 +212,13 @@
 			this.Lbl_usuario.Text = "Usuario";
 			this.Lbl_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
+			// actualizarPólizasToolStripMenuItem
+			// 
+			this.actualizarPólizasToolStripMenuItem.Name = "actualizarPólizasToolStripMenuItem";
+			this.actualizarPólizasToolStripMenuItem.Size = new System.Drawing.Size(278, 24);
+			this.actualizarPólizasToolStripMenuItem.Text = "5120 - Actualizar Pólizas";
+			this.actualizarPólizasToolStripMenuItem.Click += new System.EventHandler(this.ActualizarPólizasToolStripMenuItem_Click);
+			// 
 			// MDI_CONTA
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -256,5 +265,6 @@
 		private System.Windows.Forms.ToolStripMenuItem tipoDePólizaToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem nomenclaturaContalbleToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem actualizarPólizasToolStripMenuItem;
 	}
 }
